@@ -1,0 +1,923 @@
+example/arm-cortex-m-exceptions/main.c:101:28: error: Signed integer overflow for expression '(0x6<<5)<<24'. [integerOverflow]
+  *nvic_ipr2 |= (0x6 << 5) << 24;
+                           ^
+example/armv7-mpu/main.c:48:4: error: Null pointer dereference: bad_pointer [nullPointer]
+  *bad_pointer = 0xdeadbeef;
+   ^
+example/armv7-mpu/main.c:47:36: note: Assignment 'bad_pointer=(void*)0x0', assigned value is 0
+  volatile uint32_t *bad_pointer = (void *)0x0;
+                                   ^
+example/armv7-mpu/main.c:48:4: note: Null pointer dereference
+  *bad_pointer = 0xdeadbeef;
+   ^
+example/best-of-binutils/nrf52_example/startup.c:30:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/best-of-binutils/nrf52_example/startup.c:15:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/best-of-binutils/nrf52_example/startup.c:30:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/best-of-binutils/nrf52_example/startup.c:17:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/best-of-binutils/nrf52_example/startup.c:30:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/best-of-binutils/nrf52_example/startup.c:30:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/ble-primer/ble_app_template/simple_service.c:183:23: style: Variable 'err_code' is assigned a value that is never used. [unreadVariable]
+    uint32_t err_code = NRF_SUCCESS;
+                      ^
+example/breakpoint/src/startup.c:32:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/breakpoint/src/startup.c:17:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/breakpoint/src/startup.c:32:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/breakpoint/src/startup.c:19:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/breakpoint/src/startup.c:32:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/breakpoint/src/startup.c:32:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/c-struct-padding-initialization/example.c:23:37: warning: The address of local variable 'foo' might be accessed at non-zero index. [objectIndex]
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:38:3: note: Address of variable taken here.
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:38:3: note: Calling function 'hex_print', 2nd argument '&foo' value is lifetime=foo
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:23:37: note: The address of local variable 'foo' might be accessed at non-zero index.
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:23:37: warning: The address of local variable 'foo' might be accessed at non-zero index. [objectIndex]
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:45:3: note: Address of variable taken here.
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:45:3: note: Calling function 'hex_print', 2nd argument '&foo' value is lifetime=foo
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:23:37: note: The address of local variable 'foo' might be accessed at non-zero index.
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:23:37: warning: The address of local variable 'foo' might be accessed at non-zero index. [objectIndex]
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:50:3: note: Address of variable taken here.
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:50:3: note: Calling function 'hex_print', 2nd argument '&foo' value is lifetime=foo
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:23:37: note: The address of local variable 'foo' might be accessed at non-zero index.
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:23:37: warning: The address of local variable 'foo' might be accessed at non-zero index. [objectIndex]
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/example.c:55:3: note: Address of variable taken here.
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:55:3: note: Calling function 'hex_print', 2nd argument '&foo' value is lifetime=foo
+  HEX_PRINT(&foo, sizeof(foo));
+  ^
+example/c-struct-padding-initialization/example.c:23:37: note: The address of local variable 'foo' might be accessed at non-zero index.
+    printf(" %02x", ((uint8_t *)val)[i]);
+                                    ^
+example/c-struct-padding-initialization/packing.c:17:11: style: struct member 'foo_packed::b' is never used. [unusedStructMember]
+  uint8_t b;
+          ^
+example/c-struct-padding-initialization/packing.c:18:12: style: struct member 'foo_packed::a' is never used. [unusedStructMember]
+  uint16_t a;
+           ^
+example/compiler-flags/main.c:51:3: warning: memset() called to fill 0 bytes. [memsetZeroBytes]
+  memset(buf, NUM_ITEMS, 0x0);
+  ^
+example/compiler-flags/main.c:52:3: warning:inconclusive: Array 'buf' is filled incompletely. Did you forget to multiply the size given to 'memset()' with 'sizeof(*buf)'? [incompleteArrayFill]
+  memset(buf, 0x0, NUM_ITEMS);
+  ^
+example/compiler-flags/main.c:59:9: style: Local variable 'result' shadows outer variable [shadowVariable]
+    int result = i;
+        ^
+example/compiler-flags/main.c:56:7: note: Shadowed declaration
+  int result = 4;
+      ^
+example/compiler-flags/main.c:59:9: note: Shadow variable
+    int result = i;
+        ^
+example/compiler-flags/main.c:26:12: style: struct member 'my_struct::b' is never used. [unusedStructMember]
+  uint16_t b;
+           ^
+example/compiler-flags/main.c:27:12: style: struct member 'my_struct::c' is never used. [unusedStructMember]
+  uint64_t c;
+           ^
+example/compiler-flags/main.c:28:12: style: struct member 'my_struct::d' is never used. [unusedStructMember]
+  uint32_t d;
+           ^
+example/compiler-flags/main.c:38:12: style: struct member 'my_packed_struct::b' is never used. [unusedStructMember]
+  uint16_t b;
+           ^
+example/compiler-flags/main.c:39:12: style: struct member 'my_packed_struct::c' is never used. [unusedStructMember]
+  uint64_t c;
+           ^
+example/compiler-flags/main.c:40:12: style: struct member 'my_packed_struct::d' is never used. [unusedStructMember]
+  uint32_t d;
+           ^
+example/cortex-m-fault-debug/startup.c:124:9: style: Same expression on both sides of '|='. [duplicateExpression]
+  *cfsr |= *cfsr;
+        ^
+example/cortex-m-fault-debug/startup.c:30:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/cortex-m-fault-debug/startup.c:15:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/cortex-m-fault-debug/startup.c:30:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/cortex-m-fault-debug/startup.c:17:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/cortex-m-fault-debug/startup.c:30:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/cortex-m-fault-debug/startup.c:30:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/debugging-asserts/startup.c:28:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/debugging-asserts/startup.c:13:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/debugging-asserts/startup.c:28:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/debugging-asserts/startup.c:15:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/debugging-asserts/startup.c:28:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/debugging-asserts/startup.c:28:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/debugmon/src/debug_monitor_exception.c:136:11: warning: Redundant assignment of '*dfsr' to itself. [selfAssignment]
+    *dfsr = *dfsr;
+          ^
+example/debugmon/src/shell.c:146:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (c == '\b') {
+        ^
+example/debugmon/src/shell.c:134:32: note: 'is_backspace' is assigned value 'c=='\b'' here.
+  const bool is_backspace = (c == '\b');
+                               ^
+example/debugmon/src/shell.c:141:7: note: First condition
+  if (is_backspace) {
+      ^
+example/debugmon/src/shell.c:146:9: note: Second condition
+  if (c == '\b') {
+        ^
+example/debugmon/src/startup.c:32:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/debugmon/src/startup.c:17:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/debugmon/src/startup.c:32:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/debugmon/src/startup.c:19:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/debugmon/src/startup.c:32:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/debugmon/src/startup.c:32:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/device-heartbeat-metrics/gcc/gcc_startup.c:27:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/device-heartbeat-metrics/gcc/gcc_startup.c:14:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/device-heartbeat-metrics/gcc/gcc_startup.c:27:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/device-heartbeat-metrics/gcc/gcc_startup.c:16:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/device-heartbeat-metrics/gcc/gcc_startup.c:27:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/device-heartbeat-metrics/gcc/gcc_startup.c:27:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/device-heartbeat-metrics/src/device_metrics/metrics.c:67:43: style:inconclusive: Function 'device_metrics_timer_start' argument 1 names different: declaration 'start' definition 'tick_buf'. [funcArgNamesDifferent]
+void device_metrics_timer_start(uint32_t *tick_buf) {
+                                          ^
+example/device-heartbeat-metrics/src/device_metrics/metrics.h:29:43: note: Function 'device_metrics_timer_start' argument 1 names different: declaration 'start' definition 'tick_buf'.
+void device_metrics_timer_start(uint32_t *start);
+                                          ^
+example/device-heartbeat-metrics/src/device_metrics/metrics.c:67:43: note: Function 'device_metrics_timer_start' argument 1 names different: declaration 'start' definition 'tick_buf'.
+void device_metrics_timer_start(uint32_t *tick_buf) {
+                                          ^
+example/faster-compilation/src/ethernetif.c:357:9: style: Condition 'p!=NULL' is always false [knownConditionTrueFalse]
+  if (p != NULL)
+        ^
+example/faster-compilation/src/ethernetif.c:334:20: note: Assignment 'p=NULL', assigned value is 0
+  struct pbuf *p = NULL, *q = NULL;
+                   ^
+example/faster-compilation/src/ethernetif.c:344:46: note: Assuming condition is false
+  if(HAL_ETH_GetReceivedFrame_IT(&EthHandle) != HAL_OK)
+                                             ^
+example/faster-compilation/src/ethernetif.c:357:9: note: Condition 'p!=NULL' is always false
+  if (p != NULL)
+        ^
+example/faster-compilation/src/ethernetif.c:338:12: style: The scope of the variable 'bufferoffset' can be reduced. [variableScope]
+  uint32_t bufferoffset = 0;
+           ^
+example/faster-compilation/src/ethernetif.c:339:12: style: The scope of the variable 'payloadoffset' can be reduced. [variableScope]
+  uint32_t payloadoffset = 0;
+           ^
+example/faster-compilation/src/ethernetif.c:340:12: style: The scope of the variable 'byteslefttocopy' can be reduced. [variableScope]
+  uint32_t byteslefttocopy = 0;
+           ^
+example/faster-compilation/src/ethernetif.c:338:25: style: Variable 'bufferoffset' is assigned a value that is never used. [unreadVariable]
+  uint32_t bufferoffset = 0;
+                        ^
+example/faster-compilation/src/ethernetif.c:339:26: style: Variable 'payloadoffset' is assigned a value that is never used. [unreadVariable]
+  uint32_t payloadoffset = 0;
+                         ^
+example/faster-compilation/src/ethernetif.c:340:28: style: Variable 'byteslefttocopy' is assigned a value that is never used. [unreadVariable]
+  uint32_t byteslefttocopy = 0;
+                           ^
+example/faster-compilation/src/system_stm32f4xx.c:225:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSE_VALUE;
+^
+example/faster-compilation/src/system_stm32f4xx.c:238:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSE_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+^
+example/faster-compilation/src/system_stm32f4xx.c:222:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+example/faster-compilation/src/system_stm32f4xx.c:243:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSI_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+^
+example/faster-compilation/src/system_stm32f4xx.c:250:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+example/firmware-shell/basic/main.c:98:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+  int len;
+      ^
+example/firmware-shell/complex/main.c:64:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+  char c;
+       ^
+example/firmware-shell/part1/main.c:98:7: style: The scope of the variable 'len' can be reduced. [variableScope]
+  int len;
+      ^
+example/firmware-shell/part2/main.c:64:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+  char c;
+       ^
+example/firmware-shell/part2/tests/src/test_shell_commands.cpp:22:3: warning:inconclusive: The buffer 's_resp_buffer' may not be null-terminated after the call to strncpy(). [terminateStrncpy]
+  strncpy(s_resp_buffer, str, sizeof(s_resp_buffer));
+  ^
+example/freertos-example-llvm/native/test.c:10:3: error: Memory leak: buf [memleak]
+  return 0;
+  ^
+example/freertos-example-llvm/src/builtin_scanbuild_examples.c:11:14: warning: Either the condition 'pointer==NULL' is redundant or there is possible null pointer dereference: pointer. [nullPointerRedundantCheck]
+  result += *pointer;
+             ^
+example/freertos-example-llvm/src/builtin_scanbuild_examples.c:8:15: note: Assuming that condition 'pointer==NULL' is not redundant
+  if (pointer == NULL) {
+              ^
+example/freertos-example-llvm/src/builtin_scanbuild_examples.c:11:14: note: Null pointer dereference
+  result += *pointer;
+             ^
+example/freertos-example-llvm/src/builtin_scanbuild_examples.c:18:12: warning: Either the condition 'denominator==0' is redundant or there is division by zero at line 18. [zerodivcond]
+    rv = 1 / denominator;
+           ^
+example/freertos-example-llvm/src/builtin_scanbuild_examples.c:17:19: note: Assuming that condition 'denominator==0' is not redundant
+  if (denominator == 0) {
+                  ^
+example/freertos-example-llvm/src/builtin_scanbuild_examples.c:18:12: note: Division by zero
+    rv = 1 / denominator;
+           ^
+example/freertos-example-llvm/src/startup.c:28:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/freertos-example-llvm/src/startup.c:13:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/freertos-example-llvm/src/startup.c:28:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/freertos-example-llvm/src/startup.c:15:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/freertos-example-llvm/src/startup.c:28:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/freertos-example-llvm/src/startup.c:28:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/freertos-example/startup.c:28:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/freertos-example/startup.c:13:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/freertos-example/startup.c:28:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/freertos-example/startup.c:15:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/freertos-example/startup.c:28:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/freertos-example/startup.c:28:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/fwup-architecture/app.c:30:5: warning: %lx in format string (no. 5) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    printf("App STARTED - version %d.%d.%d (%s) - CRC 0x%lx\n",
+    ^
+example/fwup-architecture/app.c:43:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+example/fwup-architecture/crc32.c:20:28: style:inconclusive: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'. [funcArgNamesDifferent]
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                           ^
+example/fwup-architecture/crc32.h:4:28: note: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'.
+uint32_t crc32(const void *buf, uint32_t size);
+                           ^
+example/fwup-architecture/crc32.c:20:28: note: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'.
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                           ^
+example/fwup-architecture/crc32.c:20:43: style:inconclusive: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'. [funcArgNamesDifferent]
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                                          ^
+example/fwup-architecture/crc32.h:4:42: note: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'.
+uint32_t crc32(const void *buf, uint32_t size);
+                                         ^
+example/fwup-architecture/crc32.c:20:43: note: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'.
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                                          ^
+example/fwup-architecture/dfu.c:40:18: style: Variable 'addr' is assigned a value that is never used. [unreadVariable]
+            addr = (uint32_t)&__slot1rom_start__;
+                 ^
+example/fwup-architecture/dfu.c:41:26: style: Variable 'start_sector' is assigned a value that is never used. [unreadVariable]
+            start_sector = 1;
+                         ^
+example/fwup-architecture/dfu.c:42:24: style: Variable 'end_sector' is assigned a value that is never used. [unreadVariable]
+            end_sector = 4;
+                       ^
+example/fwup-architecture/image.c:47:9: warning: %lx in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+        printf("CRC Mismatch: %lx vs %lx\n", a, b);
+        ^
+example/fwup-architecture/image.c:47:9: warning: %lx in format string (no. 2) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+        printf("CRC Mismatch: %lx vs %lx\n", a, b);
+        ^
+example/fwup-architecture/image.c:40:10: portability: 'addr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    addr += sizeof(image_hdr_t);
+         ^
+example/fwup-architecture/loader.c:66:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+example/fwup-architecture/syscalls.c:60:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+example/fwup-delta/app.c:30:5: warning: %lx in format string (no. 5) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    printf("App STARTED - version %d.%d.%d (%s) - CRC 0x%lx\n",
+    ^
+example/fwup-delta/app.c:43:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+example/fwup-delta/crc32.c:20:28: style:inconclusive: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'. [funcArgNamesDifferent]
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                           ^
+example/fwup-delta/crc32.h:4:28: note: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'.
+uint32_t crc32(const void *buf, uint32_t size);
+                           ^
+example/fwup-delta/crc32.c:20:28: note: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'.
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                           ^
+example/fwup-delta/crc32.c:20:43: style:inconclusive: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'. [funcArgNamesDifferent]
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                                          ^
+example/fwup-delta/crc32.h:4:42: note: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'.
+uint32_t crc32(const void *buf, uint32_t size);
+                                         ^
+example/fwup-delta/crc32.c:20:43: note: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'.
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                                          ^
+example/fwup-delta/dfu.c:36:10: portability: 'addr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    addr += offset;
+         ^
+example/fwup-delta/dfu.c:57:18: style: Variable 'addr' is assigned a value that is never used. [unreadVariable]
+            addr = (uint32_t)&__slot1rom_start__;
+                 ^
+example/fwup-delta/dfu.c:58:26: style: Variable 'start_sector' is assigned a value that is never used. [unreadVariable]
+            start_sector = 1;
+                         ^
+example/fwup-delta/dfu.c:59:24: style: Variable 'end_sector' is assigned a value that is never used. [unreadVariable]
+            end_sector = 4;
+                       ^
+example/fwup-delta/image.c:67:9: warning: %lx in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+        printf("CRC Mismatch: %lx vs %lx\n", a, b);
+        ^
+example/fwup-delta/image.c:67:9: warning: %lx in format string (no. 2) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+        printf("CRC Mismatch: %lx vs %lx\n", a, b);
+        ^
+example/fwup-delta/image.c:62:10: portability: 'addr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    addr += sizeof(image_hdr_t);
+         ^
+example/fwup-delta/image.c:76:10: portability: 'addr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    addr += sizeof(image_hdr_t);
+         ^
+example/fwup-delta/loader.c:66:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+example/fwup-delta/loader_shell_commands.c:110:32: warning: The address of local variable '__slot2rom_start__' might be accessed at non-zero index. [objectIndex]
+        printf("%02x%02x ", ptr[i], ptr[i+1]);
+                               ^
+example/fwup-delta/loader_shell_commands.c:99:31: note: Address of variable taken here.
+    uint8_t *ptr = (uint8_t *)&__slot2rom_start__;
+                              ^
+example/fwup-delta/loader_shell_commands.c:110:32: note: The address of local variable '__slot2rom_start__' might be accessed at non-zero index.
+        printf("%02x%02x ", ptr[i], ptr[i+1]);
+                               ^
+example/fwup-delta/loader_shell_commands.c:103:5: portability: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+    printf("Dumpling slot 2, (%u bytes)\n", size);
+    ^
+example/fwup-delta/simple_fileio.c:35:60: style:inconclusive: Function 'sfio_fseek' argument 3 names different: declaration 'whence' definition 'origin'. [funcArgNamesDifferent]
+int sfio_fseek(sfio_stream_t *stream, long int offset, int origin) {
+                                                           ^
+example/fwup-delta/simple_fileio.h:25:60: note: Function 'sfio_fseek' argument 3 names different: declaration 'whence' definition 'origin'.
+int sfio_fseek(sfio_stream_t *stream, long int offset, int whence);
+                                                           ^
+example/fwup-delta/simple_fileio.c:35:60: note: Function 'sfio_fseek' argument 3 names different: declaration 'whence' definition 'origin'.
+int sfio_fseek(sfio_stream_t *stream, long int offset, int origin) {
+                                                           ^
+example/fwup-delta/syscalls.c:60:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+example/fwup-signing/app.c:30:5: warning: %lx in format string (no. 5) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    printf("App STARTED - version %d.%d.%d (%s) - CRC 0x%lx\n",
+    ^
+example/fwup-signing/app.c:43:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+example/fwup-signing/crc32.c:20:28: style:inconclusive: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'. [funcArgNamesDifferent]
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                           ^
+example/fwup-signing/crc32.h:4:28: note: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'.
+uint32_t crc32(const void *buf, uint32_t size);
+                           ^
+example/fwup-signing/crc32.c:20:28: note: Function 'crc32' argument 1 names different: declaration 'buf' definition 'data'.
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                           ^
+example/fwup-signing/crc32.c:20:43: style:inconclusive: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'. [funcArgNamesDifferent]
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                                          ^
+example/fwup-signing/crc32.h:4:42: note: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'.
+uint32_t crc32(const void *buf, uint32_t size);
+                                         ^
+example/fwup-signing/crc32.c:20:43: note: Function 'crc32' argument 2 names different: declaration 'size' definition 'n_bytes'.
+uint32_t crc32(const void *data, uint32_t n_bytes) {
+                                          ^
+example/fwup-signing/dfu.c:40:18: style: Variable 'addr' is assigned a value that is never used. [unreadVariable]
+            addr = (uint32_t)&__slot1rom_start__;
+                 ^
+example/fwup-signing/dfu.c:41:26: style: Variable 'start_sector' is assigned a value that is never used. [unreadVariable]
+            start_sector = 1;
+                         ^
+example/fwup-signing/dfu.c:42:24: style: Variable 'end_sector' is assigned a value that is never used. [unreadVariable]
+            end_sector = 4;
+                       ^
+example/fwup-signing/image.c:67:9: warning: %lx in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+        printf("CRC Mismatch: %lx vs %lx\n", a, b);
+        ^
+example/fwup-signing/image.c:67:9: warning: %lx in format string (no. 2) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+        printf("CRC Mismatch: %lx vs %lx\n", a, b);
+        ^
+example/fwup-signing/image.c:62:10: portability: 'addr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    addr += sizeof(image_hdr_t);
+         ^
+example/fwup-signing/image.c:76:10: portability: 'addr' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    addr += sizeof(image_hdr_t);
+         ^
+example/fwup-signing/loader.c:66:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+example/fwup-signing/syscalls.c:60:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+example/mcuboot/application/src/shell.c:146:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (c == '\b') {
+        ^
+example/mcuboot/application/src/shell.c:134:32: note: 'is_backspace' is assigned value 'c=='\b'' here.
+  const bool is_backspace = (c == '\b');
+                               ^
+example/mcuboot/application/src/shell.c:141:7: note: First condition
+  if (is_backspace) {
+      ^
+example/mcuboot/application/src/shell.c:146:9: note: Second condition
+  if (c == '\b') {
+        ^
+example/mcuboot/application/src/startup.c:33:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/mcuboot/application/src/startup.c:17:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/mcuboot/application/src/startup.c:33:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/mcuboot/application/src/startup.c:19:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/mcuboot/application/src/startup.c:33:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/mcuboot/application/src/startup.c:33:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/mcuboot/bootloader/src/shell.c:146:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (c == '\b') {
+        ^
+example/mcuboot/bootloader/src/shell.c:134:32: note: 'is_backspace' is assigned value 'c=='\b'' here.
+  const bool is_backspace = (c == '\b');
+                               ^
+example/mcuboot/bootloader/src/shell.c:141:7: note: First condition
+  if (is_backspace) {
+      ^
+example/mcuboot/bootloader/src/shell.c:146:9: note: Second condition
+  if (c == '\b') {
+        ^
+example/mcuboot/bootloader/src/startup.c:33:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/mcuboot/bootloader/src/startup.c:17:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/mcuboot/bootloader/src/startup.c:33:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/mcuboot/bootloader/src/startup.c:19:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/mcuboot/bootloader/src/startup.c:33:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/mcuboot/bootloader/src/startup.c:33:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/mtb-m33/main.c:117:5: error: Uninitialized variable: total [uninitvar]
+    total += computation_buf[i];
+    ^
+example/mtb-m33/mtb.c:20:23: style:inconclusive: Function 'mtb_enable' argument 1 names different: declaration 'size' definition 'mtb_size'. [funcArgNamesDifferent]
+int mtb_enable(size_t mtb_size) {
+                      ^
+example/mtb-m33/mtb.h:5:23: note: Function 'mtb_enable' argument 1 names different: declaration 'size' definition 'mtb_size'.
+int mtb_enable(size_t size);
+                      ^
+example/mtb-m33/mtb.c:20:23: note: Function 'mtb_enable' argument 1 names different: declaration 'size' definition 'mtb_size'.
+int mtb_enable(size_t mtb_size) {
+                      ^
+example/mtb-m33/mtb.c:37:20: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  MTB->MASTER = (1 << 31) | (mask << 0);
+                   ^
+example/mtb-m33/mtb.c:42:22: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  MTB->MASTER &= ~(1 << 31);
+                     ^
+example/mtb-m33/mtb.c:37:20: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+  MTB->MASTER = (1 << 31) | (mask << 0);
+                   ^
+example/mtb-m33/mtb.c:42:22: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+  MTB->MASTER &= ~(1 << 31);
+                     ^
+example/mtb-m33/startup.c:28:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/mtb-m33/startup.c:13:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/mtb-m33/startup.c:28:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/mtb-m33/startup.c:15:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/mtb-m33/startup.c:28:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/mtb-m33/startup.c:28:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/renode/renode-example.c:58:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+example/reproducible-build/startup.c:30:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/reproducible-build/startup.c:15:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/reproducible-build/startup.c:30:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/reproducible-build/startup.c:17:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/reproducible-build/startup.c:30:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/reproducible-build/startup.c:30:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/swig-for-c-and-lua/example4/example4.c:63:9: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        printf("\tpriorities[%d] = %d\r\n", i, my_struct.priorities[i]);
+        ^
+example/unit-testing/complex/kv_store/kv_store_protocol_handlers.c:15:8: style: The scope of the variable 'success' can be reduced. [variableScope]
+  bool success = false;
+       ^
+example/unit-testing/complex/kv_store/kv_store_protocol_handlers.c:15:16: style: Variable 'success' is assigned a value that is never used. [unreadVariable]
+  bool success = false;
+               ^
+example/unit-testing/complex/protocol/protocol.c:23:25: style: Variable 'payload_size' is assigned a value that is never used. [unreadVariable]
+  uint32_t payload_size = *(uint32_t *)(void *)iter;
+                        ^
+example/unit-testing/complex/tests/src/test_littlefs_basic.cpp:42:3: warning: Return value of function memcmp() is not used. [ignoredReturnValue]
+  memcmp(rbuffer, wbuffer, size);
+  ^
+example/watchdog-example/main.c:140:14: style: Same expression on both sides of '|='. [duplicateExpression]
+  *RESETREAS |= *RESETREAS;
+             ^
+example/watchdog-example/startup.c:28:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/watchdog-example/startup.c:13:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/watchdog-example/startup.c:28:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/watchdog-example/startup.c:15:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/watchdog-example/startup.c:28:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/watchdog-example/startup.c:28:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/watchpoints/src/shell.c:146:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (c == '\b') {
+        ^
+example/watchpoints/src/shell.c:134:32: note: 'is_backspace' is assigned value 'c=='\b'' here.
+  const bool is_backspace = (c == '\b');
+                               ^
+example/watchpoints/src/shell.c:141:7: note: First condition
+  if (is_backspace) {
+      ^
+example/watchpoints/src/shell.c:146:9: note: Second condition
+  if (c == '\b') {
+        ^
+example/watchpoints/src/startup.c:33:36: error: Comparing pointers that point to different objects [comparePointers]
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/watchpoints/src/startup.c:17:17: note: Variable declared here.
+extern uint32_t _sbss;
+                ^
+example/watchpoints/src/startup.c:33:24: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                       ^
+example/watchpoints/src/startup.c:19:17: note: Variable declared here.
+extern uint32_t _ebss;
+                ^
+example/watchpoints/src/startup.c:33:38: note: Address of variable taken here.
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                     ^
+example/watchpoints/src/startup.c:33:36: note: Comparing pointers that point to different objects
+  for (uint32_t *dst = &_sbss; dst < &_ebss;) {
+                                   ^
+example/faster-compilation/src/stm32f4xx_it.c:136:0: style: The function 'ETH_IRQHandler' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/ethernetif.c:103:0: style: The function 'HAL_ETH_MspInit' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/ethernetif.c:160:0: style: The function 'HAL_ETH_RxCpltCallback' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/stm32f4xx_hal_timebase_tim.c:63:0: style: The function 'HAL_InitTick' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/stm32f4xx_hal_timebase_tim.c:140:0: style: The function 'HAL_ResumeTick' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/stm32f4xx_hal_timebase_tim.c:128:0: style: The function 'HAL_SuspendTick' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/stm32f4xx_hal_timebase_tim.c:154:0: style: The function 'HAL_TIM_PeriodElapsedCallback' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/stm32f4xx_it.c:71:0: style: The function 'MemManage_Handler' is never used. [unusedFunction]
+
+^
+example/arm-cortex-m-exceptions/main.c:47:0: style: The function 'POWER_CLOCK_IRQHandler' is never used. [unusedFunction]
+
+^
+example/arm-cortex-m-exceptions/main.c:85:0: style: The function 'RTC0_IRQHandler' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/system_stm32f4xx.c:212:0: style: The function 'SystemCoreClockUpdate' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/system_stm32f4xx.c:142:0: style: The function 'SystemInit' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/stm32f4xx_hal_timebase_tim.c:164:0: style: The function 'TIM6_DAC_IRQHandler' is never used. [unusedFunction]
+
+^
+example/arm-cortex-m-exceptions/main.c:75:0: style: The function 'TIMER1_IRQHandler' is never used. [unusedFunction]
+
+^
+example/arm-cortex-m-exceptions/main.c:80:0: style: The function 'TIMER2_IRQHandler' is never used. [unusedFunction]
+
+^
+example/debugging-asserts/impls/assert1.c:7:0: style: The function '__assert_func' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:27:0: style: The function '_close' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:45:0: style: The function '_exit' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:31:0: style: The function '_fstat' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:54:0: style: The function '_getpid' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:37:0: style: The function '_isatty' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:50:0: style: The function '_kill' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:41:0: style: The function '_lseek' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:75:0: style: The function '_read' is never used. [unusedFunction]
+
+^
+example/breakpoint/src/main.c:11:0: style: The function '_sbrk' is never used. [unusedFunction]
+
+^
+example/compiler-flags/main.c:101:0: style: The function '_start' is never used. [unusedFunction]
+
+^
+example/fwup-architecture/syscalls.c:58:0: style: The function '_write' is never used. [unusedFunction]
+
+^
+example/freertos-example-llvm/src/freertos_lock_port.c:35:0: style: The function 'accel_lock' is never used. [unusedFunction]
+
+^
+example/freertos-example-llvm/src/freertos_lock_port.c:40:0: style: The function 'accel_unlock' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/main.c:250:0: style: The function 'assert_failed' is never used. [unusedFunction]
+
+^
+example/ble-primer/ble_app_template/main.c:158:0: style: The function 'assert_nrf_callback' is never used. [unusedFunction]
+
+^
+example/compiler-flags/main.c:90:0: style: The function 'conversion_error_example' is never used. [unusedFunction]
+
+^
+example/debugmon/src/debug_monitor_exception.c:167:0: style: The function 'debug_monitor_disable' is never used. [unusedFunction]
+
+^
+example/debugmon/src/debug_monitor_exception.c:31:0: style: The function 'debug_monitor_handler_c' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:118:0: style: The function 'default_CSPRNG' is never used. [unusedFunction]
+
+^
+example/device-heartbeat-metrics/src/example_assert.c:4:0: style: The function 'example_assert' is never used. [unusedFunction]
+
+^
+example/mcuboot/common/src/mcuboot_port.c:206:0: style: The function 'example_assert_handler' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/minimal_nrf52_flash.c:82:0: style: The function 'example_internal_flash_read' is never used. [unusedFunction]
+
+^
+example/breakpoint/src/log_port.c:18:0: style: The function 'example_log' is never used. [unusedFunction]
+
+^
+example/device-heartbeat-metrics/src/example_log.c:22:0: style: The function 'example_log_str' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:84:0: style: The function 'flash_area_align' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:66:0: style: The function 'flash_area_close' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:80:0: style: The function 'flash_area_erase' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:88:0: style: The function 'flash_area_erased_val' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:92:0: style: The function 'flash_area_get_sectors' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:112:0: style: The function 'flash_area_id_from_image_slot' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:61:0: style: The function 'flash_area_open' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:70:0: style: The function 'flash_area_read' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:75:0: style: The function 'flash_area_write' is never used. [unusedFunction]
+
+^
+example/breakpoint/src/fpb.c:99:0: style: The function 'fpb_get_comp_config' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/boot_info.c:3:0: style: The function 'graphic_boot' is never used. [unusedFunction]
+
+^
+example/unit-testing/complex/kv_store/kv_store.c:66:0: style: The function 'kv_store_delete' is never used. [unusedFunction]
+
+^
+example/best-of-binutils/nrf52_example/minimal_heap.c:25:0: style: The function 'minimal_heap_free' is never used. [unusedFunction]
+
+^
+example/swig-for-c-and-lua/example1/example1.c:11:0: style: The function 'multiply' is never used. [unusedFunction]
+
+^
+example/best-of-binutils/nrf52_example/startup.c:86:0: style: The function 'my_fault_handler_c' is never used. [unusedFunction]
+
+^
+example/best-of-binutils/nrf52_example/mylib/file2.c:1:0: style: The function 'mylib_func2' is never used. [unusedFunction]
+
+^
+example/best-of-binutils/nrf52_example/mylib/file3.c:3:0: style: The function 'mylib_func3' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:57:0: style: The function 'os_free' is never used. [unusedFunction]
+
+^
+example/mcuboot/application/src/mcuboot_flash_storage.c:53:0: style: The function 'os_malloc' is never used. [unusedFunction]
+
+^
+example/compiler-flags/main.c:81:0: style: The function 'print_user_provided_buffer' is never used. [unusedFunction]
+
+^
+example/compiler-flags/simple_math.c:5:0: style: The function 'simple_math_get_delta' is never used. [unusedFunction]
+
+^
+example/compiler-flags/main.c:85:0: style: The function 'snprintf_truncation_example' is never used. [unusedFunction]
+
+^
+example/compiler-flags/stack_usage.c:3:0: style: The function 'stack_usage_example' is never used. [unusedFunction]
+
+^
+example/faster-compilation/src/ethernetif.c:478:0: style: The function 'sys_now' is never used. [unusedFunction]
+
+^
+example/device-heartbeat-metrics/src/freertos.def.c:8:0: style: The function 'vApplicationStackOverflowHook' is never used. [unusedFunction]
+
+^
+example/best-of-binutils/nrf52_example/main.c:52:0: style: The function 'vAssertCalled' is never used. [unusedFunction]
+
+^
+example/compiler-flags/main.c:55:0: style: The function 'variable_shadow_error_example2' is never used. [unusedFunction]
+
+^
+example/compiler-flags/stack_usage.c:14:0: style: The function 'vla_stack_usage' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
